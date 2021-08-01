@@ -1,0 +1,33 @@
+{
+  "name": "accubits",
+  "version": "1.0.0",
+  "description": "nodejs, postgres",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vrinda",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "csv-stringify": "^5.6.2",
+    "express": "^4.17.1",
+    "hjs": "0.0.6",
+    "http": "0.0.1-security",
+    "nodemailer": "^6.6.0",
+    "pg": "^8.7.1",
+    "pkg": "^5.2.0",
+    "sequelize": "^6.6.2",
+    "tedious": "^11.0.8"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "scripts": [
+      "node_modules/tedious/lib/tedious.js",
+      "models/*.js"
+    ],
+    "assets": [
+      "config/log.json"
+    ]
+  }
+}

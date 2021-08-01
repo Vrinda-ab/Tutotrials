@@ -1,0 +1,9 @@
+{
+    "local":{
+        "database":"sql_demo",
+        "username":"postgres",
+        "dialect":"postgres",
+        "password":"root",
+        "host":"localhost"
+    }
+}
