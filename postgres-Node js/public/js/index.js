@@ -9,7 +9,7 @@ function submit(){
         lastName: lname,
         email: emailId,
         Age: age,
-        pasword: pswdId
+        password: pswdId
     }
     $.ajax({
         type:"POST",
@@ -19,10 +19,9 @@ function submit(){
         dataType:"json",
         success:function(response){
             if(response.status==true){
-                //sendMail(data);
-                alert("login successfully")
+                alert("Success")
             }else{
-                console.log("error")
+                alert("Something went wrong")
             }
         },
         error:function(e){
@@ -48,7 +47,7 @@ function LogIn(){
             if(response.status==true){
                 alert("success login")
             }else{
-                console.log("error")
+                alert("Invalid username or password")
             }
         },
         error:function(e){

@@ -34,7 +34,9 @@ const login = async function login(req, res, next){
     try{
         var data= req.body;
         var result = await loginData(data);
-        if(result==null){
+        //console.log("result in service:",result)
+        if(result){
+            console.log("success...........", result.dataValues)
             let data={
                 status: true,
                 data: result
