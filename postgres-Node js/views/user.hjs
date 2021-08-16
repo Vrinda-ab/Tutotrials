@@ -12,11 +12,11 @@
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname"><br>
   <labl for="email">Email</labl><br>
-  <input type="email" id="emailId"><br>
+  <input type="email" id="emailId" name="email"><br>
   <labl for="password">Password</labl><br>
-  <input type="password" id="pswdId"><br>
+  <input type="password" id="pswdId" name="password"><br>
   <label for="age">Age</label><br>
-  <input type="number" id="ageId"><br><br>
+  <input type="number" id="ageId" name="age"><br><br>
   <button onclick="submit()" value="Submit" id="submitBtn">Submit</button>
 
 

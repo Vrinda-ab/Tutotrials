@@ -14,20 +14,39 @@ function submit(){
     $.ajax({
         type:"POST",
         contentType:"application/json",
-        url:'api/getUserDetails',
+        url:'api/validationCheck',
         data:JSON.stringify(data),
         dataType:"json",
         success:function(response){
-            if(response.status==true){
-                alert("Success")
-            }else{
-                alert("Something went wrong")
-            }
+            console.log("response:",response)
+            // if(response.status==true){
+            //     alert("Success")
+            // }else{
+            //     alert("Something went wrong")
+            // }
         },
         error:function(e){
             console.log("error:",e)
         }
     });
+
+    // $.ajax({
+    //     type:"POST",
+    //     contentType:"application/json",
+    //     url:'api/getUserDetails',
+    //     data:JSON.stringify(data),
+    //     dataType:"json",
+    //     success:function(response){
+    //         if(response.status==true){
+    //             alert("Success")
+    //         }else{
+    //             alert("Something went wrong")
+    //         }
+    //     },
+    //     error:function(e){
+    //         console.log("error:",e)
+    //     }
+    // });
 }
 
 function LogIn(){

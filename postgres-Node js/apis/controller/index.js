@@ -3,22 +3,24 @@ const{
     loginData
 }=require('../services/index')
 
+//const getUser= function getUser()
 const getUser= async function getUser(req, res, next){
     try{
         let body = req.body;
-
         let result= await inserUser(body)
         if(result){
-            let data={
-                status: true,
-                data: result
-            }
-            res.status(200);
-            res.json(data);
+            next();
+            // let data={
+            //     status: true,
+            //     data: result
+            // }
+            // res.status(200);
+            // res.json(data);
         }else{
             let data={
                 status: false,
-                data:"Failed"
+                data:"Failed",
+                message:"error at insertion"
             }
             res.status(200);
             res.json(data);
